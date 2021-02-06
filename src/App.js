@@ -51,7 +51,7 @@ export default function App() {
           <br />
           <br />
           <div class="row">
-            <div class="col-6">
+            <div class="col-sm-6">
               <img
                 src="https://openweathermap.org/img/wn/10d@2x.png"
                 alt="Clear"
@@ -74,7 +74,7 @@ export default function App() {
                 </p>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-sm-6">
               <ul>
                 <li>
                   Wind: <span class="wind" id="wind"></span> km/hr
