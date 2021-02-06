@@ -63,11 +63,11 @@ export default function App() {
                   {" "}
                   <span id="temperaturemain"> 20</span>
                   <span class="units">
-                    <a href="#" id="celsius-link">
+                    <a href="/#" id="celsius-link">
                       °C{" "}
                     </a>{" "}
                     |
-                    <a href="#" id="fahrenheit-link">
+                    <a href="/#" id="fahrenheit-link">
                       °F{" "}
                     </a>
                   </span>
