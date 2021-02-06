@@ -6,41 +6,40 @@ import Weather from "./Weather";
 export default function App() {
   return (
     <div className="App">
-      <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <form class="search" id="search">
-              <div class="form-group">
+      <div className="container">
+        <div className="row">
+          <div className="col-9">
+            <form className="search" id="search">
+              <div className="form-group">
                 <input
                   type="text"
                   placeholder="Enter City"
                   autocomplete="off"
-                  class="form-control"
+                  className="form-control"
                   id="entercity"
                 />
               </div>
             </form>
           </div>
-          <div class="col-1">
-            <button type="submit" class="btn btn-light">
+          <div className="col-3">
+            <button type="submit" className="btn btn-light">
               Search
             </button>
           </div>
         </div>
-        <div class="currLoc">
-          <button type="button" class="btn btn-outline-light btn-sm">
+        <div className="currLoc">
+          <button type="button" className="btn btn-outline-light btn-sm">
             Current Location
           </button>
         </div>
         <br />
         <hr />
-        <div class="col-6">
-          <div class="city-name" id="name">
+          <div className="city-name" id="name">
             <h1>Paris </h1>
           </div>
           <br />
           <br />
-          <div class="lastUpdated">
+          <div className="lastUpdated">
             <h2>
               Last updated: <span id="date"></span>
             </h2>
@@ -50,19 +49,19 @@ export default function App() {
           <br />
           <br />
           <br />
-          <div class="row">
-            <div class="col-sm-6">
+          <div className="row">
+            <div className="col-6">
               <img
                 src="https://openweathermap.org/img/wn/10d@2x.png"
                 alt="Clear"
                 id="icon"
-                class="float-left"
+                className="float-left"
               />
-              <div class="temperature1">
+              <div className="temperature1">
                 <p>
                   {" "}
                   <span id="temperaturemain"> 20</span>
-                  <span class="units">
+                  <span className="units">
                     <a href="/#" id="celsius-link">
                       °C{" "}
                     </a>{" "}
@@ -74,13 +73,13 @@ export default function App() {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div className="col-6">
               <ul>
                 <li>
-                  Wind: <span class="wind" id="wind"></span> km/hr
+                  Wind: <span className="wind" id="wind"></span> km/hr
                 </li>
                 <li>
-                  Humidity: <span class="wind" id="humidity"></span>%
+                  Humidity: <span className="humidity" id="humidity"></span>%
                 </li>
               </ul>
             </div>
@@ -99,7 +98,6 @@ export default function App() {
               by Tianna Palumbo
             </footer>
           </div>
-        </div>
       </div>
     </div>
   );
