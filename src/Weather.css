@@ -2,6 +2,6 @@
     padding: 10px;
 }
 
-.button {
-    padding: 10px;
+.btn btn-sm btn-outline-light shadow-sm {
+    padding: 5px;
 }
