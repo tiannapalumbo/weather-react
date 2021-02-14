@@ -2,6 +2,8 @@
     padding: 10px;
 }
 
-.btn btn-sm btn-outline-light shadow-sm {
-    padding: 5px;
+.Weather .searchIcon {
+    display: inline-block;
+    position: relative;
+    right: 15px; 
 }
