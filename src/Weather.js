@@ -11,7 +11,7 @@ export default function Weather() {
             <div className="col-10">
               <input
                 type="search"
-                className="form-control form-control shadow border-0"
+                className="form-control form-control-sm shadow-sm border-0"
                 placeholder="Search for a city"
                 autoFocus="on"
                 autoComplete="off"
@@ -20,12 +20,12 @@ export default function Weather() {
             <div className="col-1">
               <button
                 type="submit"
-                className="form-control btn btn btn-light shadow border-0 searchIcon">
+                className="form-control-sm btn btn-sm btn-light shadow-sm border-0 searchIcon">
                 <i className="fas fa-search search-icon" />
               </button>
             </div>
             <div className="col-1">
-              <button type="button" className="btn btn btn-outline-light shadow" >
+              <button type="button" className="btn btn-sm btn-outline-light shadow-sm" >
                 <i className="fas fa-map-marker-alt" />
               </button>
             </div>
