@@ -31,7 +31,7 @@ export default function Weather() {
       </ul>
       <div className="row">
           <div className="col-12">
-              <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy" />
+              <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Mainly Cloudy" />
               6°C
           </div>
         </div>
