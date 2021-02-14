@@ -7,83 +7,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="row">
-          <div className="col-9">
-            <form className="search" id="search">
-              <div className="form-group">
-                <input
-                  type="text"
-                  placeholder="Enter City"
-                  autocomplete="off"
-                  className="form-control"
-                  id="entercity"
-                />
-              </div>
-            </form>
-          </div>
-          <div className="col-3">
-            <button type="submit" className="btn btn-light">
-              Search
-            </button>
-          </div>
-        </div>
-        <div className="currLoc">
-          <button type="button" className="btn btn-outline-light btn-sm">
-            Current Location
-          </button>
-        </div>
-        <br />
-        <hr />
-          <div className="city-name" id="name">
-            <h1>Paris </h1>
-          </div>
-          <br />
-          <br />
-          <div className="lastUpdated">
-            <h2>
-              Last updated: <span id="date"></span>
-            </h2>
-            <Weather city="Paris"/>
-            <h3 id="weatherdesc"> </h3>
-          </div>
-          <br />
-          <br />
-          <br />
-          <div className="row">
-            <div className="col-6">
-              <img
-                src="https://openweathermap.org/img/wn/10d@2x.png"
-                alt="Clear"
-                id="icon"
-                className="float-left"
-              />
-              <div className="temperature1">
-                <p>
-                  {" "}
-                  <span id="temperaturemain"> 20</span>
-                  <span className="units">
-                    <a href="/#" id="celsius-link">
-                      °C{" "}
-                    </a>{" "}
-                    |
-                    <a href="/#" id="fahrenheit-link">
-                      °F{" "}
-                    </a>
-                  </span>
-                </p>
-              </div>
-            </div>
-            <div className="col-6">
-              <ul>
-                <li>
-                  Wind: <span className="wind" id="wind"></span> km/hr
-                </li>
-                <li>
-                  Humidity: <span className="humidity" id="humidity"></span>%
-                </li>
-              </ul>
-            </div>
-          </div>
+       <Weather />
           <div>
             <footer>
               <a
@@ -93,9 +17,9 @@ export default function App() {
                 rel="noreferrer"
               >
                 {" "}
-                Open-source code{" "}
+                Open-sourced code{" "}
               </a>
-              by Tianna Palumbo
+              on GitHub by Tianna Palumbo
             </footer>
           </div>
       </div>
