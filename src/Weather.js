@@ -37,7 +37,7 @@ export default function Weather() {
         </div>
       <div className="row"> 
         <div className="col-12">
-        Precipitation: 15 | Humidity: 75% | %Wind: 10 km/h
+        Precipitation: 15 | Humidity: 75% | Wind: 10 km/h
         </div>
           </div>
       </div>
