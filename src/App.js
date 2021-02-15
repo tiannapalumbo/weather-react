@@ -11,6 +11,16 @@ export default function App() {
        <hr/>
           <div>
             <footer>
+              Coded by {" "} 
+              <a
+                href="https://www.linkedin.com/in/tianna-palumbo/"
+                id="linkedinlink"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Tianna Palumbo 
+                </a> {" "}
+              and
               <a
                 href="https://github.com/tiannapalumbo/weather-react"
                 id="githublink"
@@ -18,9 +28,8 @@ export default function App() {
                 rel="noreferrer"
               >
                 {" "}
-                Open-sourced code{" "}
+                open-sourced on Github {" "}
               </a>
-              on GitHub by Tianna Palumbo
             </footer>
           </div>
       </div>

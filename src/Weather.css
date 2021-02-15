@@ -1,5 +1,6 @@
 .Weather {
     padding: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .Weather .searchIcon {
@@ -7,3 +8,20 @@
     position: relative;
     right: 20px;
   }
+
+.Weather .weatherinfo {
+    font-size: small;
+    display: block;
+    margin: 0 auto;
+}
+
+.Weather .temperature {
+    font-size: 60px;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.Weather .unit {
+    font-size: 15px;
+    vertical-align: 15px;
+}

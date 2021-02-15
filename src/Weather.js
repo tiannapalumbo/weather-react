@@ -40,11 +40,12 @@ export default function Weather() {
       <div className="row">
           <div className="col-12">
               <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Mainly Cloudy" />
-              6°C
+              <span className="temperature"> 6</span> 
+              <span className="unit">°C | °F</span>
           </div>
         </div>
       <div className="row"> 
-        <div className="col-12">
+        <div className="weatherinfo">
         Precipitation: 15 | Humidity: 75% | Wind: 10 km/h
         </div>
           </div>
