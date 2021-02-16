@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 
 export default function Weather() {
+const [ready, setReady] = useState(false);
+const [weatherData, setWeatherData] = useState({});
 
+    function handleResponse(response) {
+    console.log(response.data);
+        setWeatherData({
+            temperature: response.data.main.temp,
+            humidity: response.data.main.humidity,
+            wind: response.data.wind.speed,
+            city: response.data.name
+            });
+
+    setReady(true);
+    }
+
+    if (ready) {
     return (
         <div className="Weather">
         <form>
@@ -32,23 +47,31 @@ export default function Weather() {
           </div>
         </form>
         <hr/>
-      <h1> New York </h1>
+      <h1> {weatherData.city} </h1>
       <ul> 
           <li> Monday 07:00 </li>
-          <li> Cloudy </li>
+          <li> {weatherData.description} </li>
       </ul>
       <div className="row">
           <div className="col-12">
               <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Mainly Cloudy" />
-              <span className="temperature"> 6</span> 
+              <span className="temperature"> {Math.round(weatherData.temperature)}</span> 
               <span className="unit">°C | °F</span>
           </div>
         </div>
       <div className="row"> 
         <div className="weatherinfo">
-        Precipitation: 15 | Humidity: 75% | Wind: 10 km/h
+        Humidity: {weatherData.humidity} % | Wind: {weatherData.wind} km/h
         </div>
           </div>
       </div>
-    )
+    );  
+    } else {
+    const apiKey = "6e8ce867bc46f41d0e8f2b0e41afed08";
+    let city = "New York";
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse); 
+
+    return "Loading...";
+    }
 }

@@ -15,6 +15,11 @@
     margin: 0 auto;
 }
 
+.Weather .img {
+    height: 64px;
+    width: 64px;
+}
+
 .Weather .temperature {
     font-size: 60px;
     vertical-align: middle;
