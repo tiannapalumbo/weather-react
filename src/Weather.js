@@ -3,22 +3,22 @@ import "./Weather.css";
 import axios from "axios";
 
 export default function Weather() {
-const [ready, setReady] = useState(false);
-const [weatherData, setWeatherData] = useState({});
+const [weatherData, setWeatherData] = useState({ ready: false });
 
     function handleResponse(response) {
-    console.log(response.data);
         setWeatherData({
+            ready: true,
             temperature: response.data.main.temp,
+            description: response.data.weather[0].description,
+            date: "Monday 07:00",
+            iconUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
             city: response.data.name
             });
-
-    setReady(true);
     }
 
-    if (ready) {
+    if (weatherData.ready) {
     return (
         <div className="Weather">
         <form>
@@ -49,12 +49,12 @@ const [weatherData, setWeatherData] = useState({});
         <hr/>
       <h1> {weatherData.city} </h1>
       <ul> 
-          <li> Monday 07:00 </li>
-          <li> {weatherData.description} </li>
+          <li> {weatherData.date} </li>
+          <li className="text-capitalize"> {weatherData.description} </li>
       </ul>
       <div className="row">
           <div className="col-12">
-              <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Mainly Cloudy" />
+              <img src={weatherData.iconUrl} alt={weatherData.description} />
               <span className="temperature"> {Math.round(weatherData.temperature)}</span> 
               <span className="unit">°C | °F</span>
           </div>
