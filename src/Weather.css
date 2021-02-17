@@ -30,3 +30,11 @@
     font-size: 15px;
     vertical-align: 15px;
 }
+
+.Weather .formatdate {
+    display: block;
+    margin: 0 auto;
+    font-size: small;
+    text-align: center;
+    line-height: 1px;
+}
