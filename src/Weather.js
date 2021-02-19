@@ -15,7 +15,8 @@ const [city, setCity] = useState(props.defaultCity);
             iconUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
-            city: response.data.name
+            city: response.data.name,
+            country: response.data.sys.country
             });
     }
 
@@ -70,7 +71,7 @@ const [city, setCity] = useState(props.defaultCity);
       </div>
     );  
     } else {
-        search();
+    search();
     return "Loading...";
     }
 }
