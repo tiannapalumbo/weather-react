@@ -38,11 +38,11 @@
 }
 
 .Weather .float-left {
-    margin-left: 105px;
+    margin-left: 100px;
 }
 
 .Weather .float-right {
-    margin-right: 100px;
+    margin-right: 85px;
 }
 
 .Weather .formatdate {
