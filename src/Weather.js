@@ -67,7 +67,9 @@ const [city, setCity] = useState(props.defaultCity);
           </div>
         </form>
         <hr/>
+        <div className="border">
         <WeatherInfo data={weatherData}/>
+        </div>
       </div>
     );  
     } else {
