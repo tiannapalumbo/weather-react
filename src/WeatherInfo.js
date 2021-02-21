@@ -9,27 +9,31 @@ export default function WeatherInfo(props) {
 <div className="WeatherInfo" > 
         <h1> {props.data.city}, {props.data.country} </h1>
     <ul> 
-        <li className="text-capitalize"> {props.data.description} </li>
+    <li className="formatdate"> <FormattedDate date={props.data.date} />   
+        </li>
+        <li className="text-capitalize"> {props.data.description} 
+        </li>
     </ul>
     <div className="row">
-        <div className="col-12">
-            <div className="float-left">
+        <div className="col-6">
+            <div className="clearfix">
+                <div className="float-left">
              <WeatherIcon code={props.data.icon} />   
             </div>
-            <div className="float-right">
+            <div className="float-left">
               <WeatherTemperature celsius={props.data.temperature}/>  
             </div>
+           </div> 
         </div>
+      <div className="col-6">
+          <ul>
+          <li><span className="weatherinfo">Feels like: <span className="desc"> {Math.round(props.data.feelsLike)}° </span> </span></li> 
+              <li><span className="weatherinfo"> Humidity: <span className="desc"> {props.data.humidity}% </span> </span></li>
+              <li><span className="weatherinfo">Wind: <span className="desc"> {Math.round(props.data.wind)} km/h </span> </span></li> 
+          </ul>
       </div>
-    <div className="row"> 
-      <div className="col-12">
-      <span className="weatherinfo"> Humidity: {props.data.humidity}% | Wind: {Math.round(props.data.wind)} km/h </span> 
       </div>
       </div>
-      <br/>
-           <div className="formatdate"> <FormattedDate date={props.data.date} />   
-        </div>
-</div>
     );
     
 }

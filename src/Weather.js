@@ -15,6 +15,7 @@ const [city, setCity] = useState(props.defaultCity);
             icon: response.data.weather[0].icon,
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
+            feelsLike: response.data.main.feels_like,
             city: response.data.name,
             country: response.data.sys.country
             });
@@ -67,7 +68,7 @@ const [city, setCity] = useState(props.defaultCity);
           </div>
         </form>
         <hr/>
-        <div className="border">
+        <div className="weatherinfo">
         <WeatherInfo data={weatherData}/>
         </div>
       </div>

@@ -1,13 +1,6 @@
 .Weather {
-    padding: 10px;
+    margin-top: 10px;
     font-family: 'Roboto Condensed', sans-serif;
-}
-
-.Weather .border {
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 9px 9px 5px #000;
 }
 
 .Weather .searchIcon {
@@ -16,10 +9,29 @@
     right: 20px;
   }
 
+.Weather .btn {
+    color: #b1adeb;
+}
+
 .Weather .weatherinfo {
     font-size: small;
-    display: block;
-    margin: 0 auto;
+}
+
+.Weather .desc {
+    color: #b1adeb;
+    font-weight: bold;
+}
+
+.Weather .formatdate {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.Weather .text-capitalize {
+    color: #b1adeb;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 25px;
 }
 
 .Weather canvas {
@@ -30,25 +42,10 @@
 .Weather .temperature {
     font-size: 55px;
     padding: 0;
+    margin-left: 10px;
 }
 
 .Weather .unit {
     font-size: 15px;
     vertical-align: 30px;
-}
-
-.Weather .float-left {
-    margin-left: 80px;
-}
-
-.Weather .float-right {
-    margin-right: 70px;
-}
-
-.Weather .formatdate {
-    display: block;
-    margin: 0 auto;
-    font-size: small;
-    text-align: center;
-    line-height: 1px;
 }
