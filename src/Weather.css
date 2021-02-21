@@ -35,14 +35,17 @@
 }
 
 .Weather canvas {
-    margin: 12px auto;
-    display: inline-block;
+    display: block;
+    margin: 15px auto;
+}
+
+.Weather .bigicon {
+    background: red;
 }
 
 .Weather .temperature {
     font-size: 55px;
-    padding: 0;
-    margin-left: 10px;
+    margin: 12px;
 }
 
 .Weather .unit {

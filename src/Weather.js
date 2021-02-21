@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo.js";
+import WeatherForecast from "./WeatherForecast.js";
 import "./Weather.css";
 import axios from "axios";
 
@@ -69,7 +70,10 @@ const [city, setCity] = useState(props.defaultCity);
         </form>
         <hr/>
         <div className="weatherinfo">
-        <WeatherInfo data={weatherData}/>
+            <WeatherInfo data={weatherData}/>
+        </div>
+        <div className="weatherforecast">
+            <WeatherForecast city={weatherData.city}/>
         </div>
       </div>
     );  
