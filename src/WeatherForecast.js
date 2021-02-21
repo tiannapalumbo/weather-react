@@ -1,45 +1,23 @@
 import React, { useState } from "react";
-import WeatherIcon from "./WeatherIcon.js";
+import WeatherForecastPreview from "./WeatherForecastPreview";
 import axios from "axios";
 import "./WeatherForecast.css";
 
 export default function WeatherForecast(props) {
     const [loaded, setLoaded] = useState(false);
-    const [forecast, setForecast] =useState(null);
+    const [forecast, setForecast] = useState(null);
 
     function handleForecastResponse(response) {
         setForecast(response.data);
         setLoaded(true);
     }
 
-    if (loaded) {
+    if (loaded && props.city === forecast.city.name) {
         return (
             <div className="WeatherForecast row">
-                <div className="col"> 
-                10:00 
-                <WeatherIcon code={forecast.list[0].weather[0].icon} />
-            {Math.round(forecast.list[0].main.temp)}
-             </div>
-             <div className="col"> 
-                10:00 
-                <WeatherIcon code={forecast.list[0].weather[0].icon} />
-            {Math.round(forecast.list[0].main.temp)}
-             </div>
-             <div className="col"> 
-                10:00 
-                <WeatherIcon code={forecast.list[0].weather[0].icon} />
-            {Math.round(forecast.list[0].main.temp)}
-             </div>
-             <div className="col"> 
-                10:00 
-                <WeatherIcon code={forecast.list[0].weather[0].icon} />
-            {Math.round(forecast.list[0].main.temp)}
-             </div>
-             <div className="col"> 
-                10:00 
-                <WeatherIcon code={forecast.list[0].weather[0].icon} />
-            {Math.round(forecast.list[0].main.temp)}
-             </div>
+                {forecast.list.slice(0, 5).map(function(forecastItem) {
+                    return <WeatherForecastPreview data={forecastItem} />;
+                })}
             </div>
         );
         

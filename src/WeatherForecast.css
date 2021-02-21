@@ -5,3 +5,13 @@
 .WeatherForecast canvas {
     display: block;
 }
+
+.WeatherForecast .fhours {
+    color: #b1adeb;
+    font-weight: bold;
+}
+
+.WeatherForecast .ftemp {
+    color: #b1adeb;  
+    font-weight: bold; 
+}

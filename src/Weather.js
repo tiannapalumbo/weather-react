@@ -17,6 +17,8 @@ const [city, setCity] = useState(props.defaultCity);
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
             feelsLike: response.data.main.feels_like,
+            maxtemp: response.data.main.temp_max,
+            mintemp: response.data.main.temp_min,
             city: response.data.name,
             country: response.data.sys.country
             });
@@ -39,6 +41,19 @@ const [city, setCity] = useState(props.defaultCity);
         setCity(event.target.value);
     }
 
+    function findLocation(position) {
+        const apiKey = "6e8ce867bc46f41d0e8f2b0e41afed08";
+        let latitude = position.coords.latitude;
+        let longitude = position.coords.longitude;
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(handleResponse);
+      }
+    
+      function getCurrentLocation(event) {
+        navigator.geolocation.getCurrentPosition(findLocation);
+      }
+
+    
     if (weatherData.ready) {
     return (
         <div className="Weather">
@@ -62,7 +77,9 @@ const [city, setCity] = useState(props.defaultCity);
               </button>
             </div>
             <div className="col-1">
-              <button type="button" className="btn btn-sm btn-outline-light shadow-sm" >
+              <button type="button" 
+              className="btn btn-sm btn-outline-light shadow-sm" 
+              onClick={getCurrentLocation}>
                 <i className="fas fa-map-marker-alt" />
               </button>
             </div>
@@ -72,6 +89,7 @@ const [city, setCity] = useState(props.defaultCity);
         <div className="weatherinfo">
             <WeatherInfo data={weatherData}/>
         </div>
+        <hr/>
         <div className="weatherforecast">
             <WeatherForecast city={weatherData.city}/>
         </div>

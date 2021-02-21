@@ -29,7 +29,8 @@ export default function App() {
               >
                 {" "}
                 open-sourced on Github {" "}
-              </a>
+              </a> 
+              
             </footer>
           </div>
       </div>

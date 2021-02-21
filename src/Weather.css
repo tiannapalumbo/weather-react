@@ -14,24 +14,27 @@
 }
 
 .Weather .weatherinfo {
-    font-size: small;
+    font-size: 12px;
 }
 
 .Weather .desc {
     color: #b1adeb;
     font-weight: bold;
+    font-size: 12px;
 }
 
 .Weather .formatdate {
-    font-size: 13px;
+    font-size: 10px;
     line-height: 20px;
+    color: lightgrey;
+    font-style: italic;
 }
 
 .Weather .text-capitalize {
     color: #b1adeb;
     font-size: 15px;
     font-weight: bold;
-    line-height: 25px;
+    line-height: 27px;
 }
 
 .Weather canvas {
@@ -39,16 +42,13 @@
     margin: 15px auto;
 }
 
-.Weather .bigicon {
-    background: red;
-}
-
 .Weather .temperature {
-    font-size: 55px;
-    margin: 12px;
+    font-size: 57px;
+    margin-left: 12px ;
 }
 
 .Weather .unit {
     font-size: 15px;
     vertical-align: 30px;
+    font-weight: bold;
 }

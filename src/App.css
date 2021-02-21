@@ -19,13 +19,14 @@ ul {
 }
 
 li {
-  line-height: 19px;
+  line-height: 15px;
   list-style: none;
 }
 
 footer {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: small;
+  color: lightgrey;
 }
 
 a {
