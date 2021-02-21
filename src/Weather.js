@@ -17,8 +17,6 @@ const [city, setCity] = useState(props.defaultCity);
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
             feelsLike: response.data.main.feels_like,
-            maxtemp: response.data.main.temp_max,
-            mintemp: response.data.main.temp_min,
             city: response.data.name,
             country: response.data.sys.country
             });
