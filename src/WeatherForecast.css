@@ -4,14 +4,22 @@
 }
 .WeatherForecast canvas {
     display: block;
+    margin: 20px;
 }
 
 .WeatherForecast .fhours {
     color: #b1adeb;
     font-weight: bold;
+    font-size: 13px;
 }
 
 .WeatherForecast .ftemp {
     color: #b1adeb;  
     font-weight: bold; 
+    font-size: 13px;
+}
+
+.WeatherForecastPreview .nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
 }
