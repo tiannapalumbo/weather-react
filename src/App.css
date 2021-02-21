@@ -4,12 +4,13 @@
   max-width: 567px;
   margin: 0 auto;
   padding-left: 10px;
+  padding-bottom: 10px;
   border-radius: 10px;
   border: 1px solid darkslategray;
 }
 
 h1 {
-  line-height: 35px;
+  line-height: 45px;
   font-weight: bold;
   color: #b1adeb;
 }
@@ -20,7 +21,7 @@ ul {
 }
 
 li {
-  line-height: 15px;
+  line-height: 19px;
   list-style: none;
 }
 
@@ -28,6 +29,7 @@ footer {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: small;
   color: lightgrey;
+  padding-top: 5px;
 }
 
 a {

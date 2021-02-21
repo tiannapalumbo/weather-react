@@ -1,5 +1,5 @@
 .Weather {
-    margin-top: 10px;
+    margin-top: 25px;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -18,28 +18,28 @@
 }
 
 .Weather .weatherinfo {
-    font-size: 12px;
+    font-size: 13px;
     margin-left: 20px;
 }
 
 .Weather .desc {
     color: #b1adeb;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .Weather .formatdate {
-    font-size: 10px;
-    line-height: 20px;
+    font-size: 13px;
+    line-height: 30px;
     color: lightgrey;
     font-style: italic;
 }
 
 .Weather .text-capitalize {
     color: #b1adeb;
-    font-size: 15px;
+    font-size: 21px;
     font-weight: bold;
-    line-height: 27px;
+    line-height: 42px;
 }
 
 .Weather canvas {
@@ -48,13 +48,18 @@
 }
 
 .Weather .temperature {
-    font-size: 57px;
+    font-size: 60px;
     margin-left: 10px ;
     
 }
 
 .Weather .unit {
     font-size: 15px;
-    vertical-align: 30px;
+    vertical-align: 32px;
     font-weight: bold;
+}
+
+.Weather .forecasttitle {
+    margin-left: 20px;
+    color: grey;
 }
