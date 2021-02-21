@@ -9,6 +9,10 @@
   border: 1px solid darkslategray;
 }
 
+hr {
+  margin-top: 20px;
+}
+
 h1 {
   line-height: 45px;
   font-weight: bold;
