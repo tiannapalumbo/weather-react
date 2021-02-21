@@ -15,7 +15,7 @@ export default function WeatherInfo(props) {
         </li>
     </ul>
     <div className="row">
-        <div className="col-6">
+        <div className="col-7">
             <div className="clearfix">
                 <div className="float-left">
              <WeatherIcon code={props.data.icon} />   
@@ -25,14 +25,14 @@ export default function WeatherInfo(props) {
             </div>
            </div> 
         </div>
-      <div className="col-6">
-          <ul> 
+      <div className="col-5">
+          <ul> <span className="alldesc"></span>
             <li><span className="weatherinfo">Feels like: <span className="desc"> {Math.round(props.data.feelsLike)} °C </span> </span></li> 
             <li><span className="weatherinfo"> High: <span className="desc"> {Math.round(props.data.maxtemp)} °C </span> </span></li>
             <li><span className="weatherinfo"> Low: <span className="desc"> {Math.round(props.data.mintemp)} °C </span> </span></li>
             <li><span className="weatherinfo"> Humidity: <span className="desc"> {props.data.humidity}% </span> </span></li>
             <li><span className="weatherinfo">Wind: <span className="desc"> {Math.round(props.data.wind)} km/h </span> </span></li> 
-          </ul>
+          </ul> 
       </div>
       </div>
       </div>
