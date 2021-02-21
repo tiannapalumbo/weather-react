@@ -13,8 +13,13 @@
     color: #b1adeb;
 }
 
+.Weather .col-6 {
+    padding: 10px;
+}
+
 .Weather .weatherinfo {
     font-size: 12px;
+    margin-left: 20px;
 }
 
 .Weather .desc {
@@ -44,7 +49,8 @@
 
 .Weather .temperature {
     font-size: 57px;
-    margin-left: 10px ;
+    margin-left: 5px ;
+    
 }
 
 .Weather .unit {
