@@ -10,13 +10,13 @@
 .WeatherForecast .fhours {
     color: #b1adeb;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .WeatherForecast .ftemp {
     color: #b1adeb;  
     font-weight: bold; 
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .WeatherForecastPreview .nopadding {
